@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">666</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+    <include>defaultskinsettingsValues</include>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(ReloadTriggered))">RunScript(script.toolbox,info=yesnodialog,header=RELOAD SKIN,text=Reloading The Skin is necessary after any modification You want to reload it now?,yesaction=ClearProperty(ReloadTriggered,home)||XBMC.ReloadSkin,noaction=ClearProperty(ReloadTriggered,home)||SetFocus(666),yeslabel=$LOCALIZE[107],nolabel=$LOCALIZE[106])</onload>
+
+	<controls>
+
+
+		
+
+		<!-- Backgrounds -->
+		<include>Animation_UP</include>
+		<include>Animation_Down</include>
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(9001)</visible>
+			<texture background="true">$INFO[Container(9001).ListItem.Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(9007)</visible>
+			<texture background="true">$INFO[Container(9007).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(9008)</visible>
+			<texture background="true">$INFO[Container(9008).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(9009)</visible>
+			<texture background="true">$INFO[Container(9009).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90091)</visible>
+			<texture background="true">$INFO[Container(90091).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90092)</visible>
+			<texture background="true">$INFO[Container(90092).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90093)</visible>
+			<texture background="true">$INFO[Container(90093).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90094)</visible>
+			<texture background="true">$INFO[Container(90094).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90095)</visible>
+			<texture background="true">$INFO[Container(90095).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90096)</visible>
+			<texture background="true">$INFO[Container(90096).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.Hasfocus(90097)</visible>
+			<texture background="true">$INFO[Container(90097).ListItem(0).Art(fanart)]</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>		
+		
+		
+		
+		
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			
+			<texture background="true">solidshadow.png</texture>
+
+			<fadetime>FanartCrossfadeTime</fadetime>
+			
+		</control>
+		<include>BackgroundVisualizations</include>
+
+
+
+		
+		
+		<!-- Big daddy group list -->
+		<control type="grouplist" id="9500">
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<include>VisibleFadeEffect_delayed</include>
+			<posx>0</posx>
+			<left>-50</left>
+			
+			<width>2150</width>
+			<height>1080</height>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<usecontrolcoords>true</usecontrolcoords>
+			<onup condition="System.HasAddon(script.globalsearch)">608</onup>
+			<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
+			<itemlayout height="375" width="1920">
+				<control type="fixedlist">
+					<width>2220</width>
+					<height>200</height>
+				</control>
+			</itemlayout>
+			<focusedlayout height="400" width="1920">
+				<control type="fixedlist">
+					<width>2220</width>
+					<height>200</height>
+				</control>
+			</focusedlayout>
+			<scrolltime tween="sine" easing="out">200</scrolltime>
+			<orientation>vertical</orientation>
+			
+			<include>Animation_Window_Open</include>
+
+			<animation effect="zoom" end="80,80" time="300" center="auto" condition="Control.HasFocus(9000)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="250,0" time="300" condition="Control.HasFocus(9000)">Conditional</animation>
+			<!-- Search group -->
+			<control type="group" id="608">
+				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(10103)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="100" condition="!Window.IsVisible(10103)">conditional</animation>
+				<top>10</top>
+				<width>1920</width>
+				<height>400</height>
+				<defaultcontrol>666</defaultcontrol>
+
+				<control type="button" id="666">
+					
+					<animation effect="zoom" end="120,120" time="100" center="auto">Focus</animation>
+					<animation effect="zoom" end="100,100" time="100" condition="!Control.HasFocus(666)">Conditional</animation>
+					
+					<description>Global Search</description>
+					<top>10</top>
+					<left>75</left>
+					<height>125</height>
+					<width>125</width>
+					<textwidth>0</textwidth>
+					<textoffsetx>0</textoffsetx>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texturefocus >ic_search_bar_orb.png</texturefocus>
+					<texturenofocus >ic_search_bar_orb.png</texturenofocus>
+					
+					<label/>
+					<onclick condition="Skin.HasSetting(Custom_Search_Button)">$INFO[Skin.String(Custom_SearchAction)]</onclick>
+					<onclick condition="!Skin.HasSetting(Custom_Search_Button) + !System.hasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+					<onclick condition="!Skin.HasSetting(Custom_Search_Button)">RunScript(script.globalsearch)</onclick>
+
+					
+					<ondown>9001</ondown>
+					<onleft>9000</onleft>
+					<onright>667</onright>
+					<include>Animation_Window_UP</include>
+				</control>
+				
+				<control type="button" id="667">
+					<visible>control.hasfocus(666) | control.hasfocus(667)</visible>
+					<animation effect="zoom" start="0,0" end="100,100" time="200" center="auto" reversible="false">VisibleChange</animation>
+					<animation effect="zoom"  start="100,100" end="120,120" time="200" center="auto">Focus</animation>
+					
+					<include>Animation_Window_UP</include>
+					
+					<description>ExtendedInfo</description>
+					<top>10</top>
+					<left>225</left>
+					<height>125</height>
+					<width>125</width>
+					<textwidth>0</textwidth>
+					<textoffsetx>0</textoffsetx>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texturefocus>ic_search_on.png</texturefocus>
+					<texturenofocus >ic_search_off.png</texturenofocus>
+					
+					<label/>
+					<onclick condition="System.hasAddon(script.extendedinfo)">RunScript(script.extendedinfo)</onclick>
+					<onclick condition="!System.hasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+
+					<ondown>9001</ondown>
+					<onleft>666</onleft>
+					<onright>601</onright>
+					
+				</control>				
+				
+
+
+
+				<control type="label">
+					<description>Search Label (Unfocused)</description>
+					<left>235</left>
+					<top>50</top>
+					<width>700</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>searchtitle</font>
+					<textcolor>matgrey</textcolor>
+					<visible>!control.hasfocus(666) + !control.hasfocus(667)</visible>
+					<include>Animation_Window_UP</include>
+					<label>$INFO[window(home).Property(ItemColor)]</label>
+					<animation effect="fade" time="200">VisibleChange</animation>
+				</control>
+				<control type="label">
+					<description>Search Label (Focused)</description>
+					<left>375</left>
+					<top>50</top>
+					<width>700</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>searchtitle</font>
+					<textcolor>white</textcolor>
+					<visible>control.hasfocus(666)</visible>
+					<label>Click to search</label>
+					<animation effect="fade" time="200">VisibleChange</animation>
+				</control>
+				<control type="label">
+					<description>Search Label (Focused)</description>
+					<left>375</left>
+					<top>50</top>
+					<width>700</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>searchtitle</font>
+					<textcolor>white</textcolor>
+					<visible>control.hasfocus(667)</visible>
+					<label>Browse movies, TV Shows</label>
+					<animation effect="fade" time="200">VisibleChange</animation>
+				</control>
+				<control type="label">
+					<description>time label</description>
+					<top>40</top>
+					<right>0</right>
+					<width>200</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>clock</font>
+					<textcolor>white</textcolor>
+					<label>$INFO[System.Time(hh:mm)]</label>
+					<include>Animation_Window_UP</include>
+				</control>
+				<control type="group">
+						<include>Animation_Window_UP</include>
+
+						<top>100</top>
+						<posx>1520</posx>
+						<right>0</right>
+						<visible>Skin.HasSetting(homepageWeatherinfo)</visible>
+						<control type="label">
+							
+							<align>right</align>
+							<font>card25</font>
+							<width>400</width>
+							<textcolor>white</textcolor>
+							<label>$INFO[Weather.Temperature]  $INFO[Weather.Location,, - ]$INFO[Weather.Conditions]</label>
+						</control>
+						 <control type="image">
+							<align>right</align>
+							<top>-80</top>
+							<posx>100</posx>
+							<width>80</width>
+							<height>80</height>
+							<fadetime>350</fadetime>
+							<aspectratio aligny="center" align="center">keep</aspectratio>
+							<texture colordiffuse="white">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
+						</control>
+				</control>
+<!-- 				<control type="rss">
+					<left>420</left>
+					<top>0</top>
+					<height>30</height>
+					<width>1520</width>
+					<align>right</align>
+					<font>card25</font>
+					<urlset>1</urlset>
+					<titlecolor>selectedfocus</titlecolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<headlinecolor>FFC0C0C0</headlinecolor>
+					<textcolor>matgrey</textcolor>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+					<visible>!Player.hasMedia</visible>
+				</control>
+ -->
+
+			</control>
+
+			<!-- Recommended Label -->
+			<control type="label" id="991">
+				<label>$INFO[Skin.String(CustomMyTvWidgetName)]</label>
+				<visible>Control.IsVisible(9001)</visible>
+				<include>CardLabel</include>
+				<include>Animation_Window_UP</include>
+			</control>
+
+			<!-- Recommended group -->
+			<control type="fixedlist" id="9001">
+				<left>-370</left>
+
+				<width>2500</width>
+				<ondown>10002</ondown>
+				<onleft>9000</onleft>
+				<scrolltime tween="sine">300</scrolltime>
+				
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(9001)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(9001)">Conditional</animation>				
+				<animation effect="zoom" end="100,100" time="200">Unfocus</animation>
+				<include condition="StringCompare(Skin.String(CustomMyTvWidgetShape),thumb)">FlexDimensions</include>
+				<include condition="StringCompare(Skin.String(CustomMyTvWidgetShape),thumb)">FlexLayout</include>
+				<include condition="StringCompare(Skin.String(CustomMyTvWidgetShape),poster)">HomePosterLayout_Top</include>
+				<visible>true</visible>
+				<focusposition>2</focusposition>
+				<include>Animation_Window_UP</include>
+				
+				<content target="$INFO[Skin.String(CustomMyTvWidgetTarget)]">$INFO[Skin.String(CustomMyTvWidgetPath)]</content>
+			</control>
+
+			<control type="list" id="10001">
+					<posx>-20</posx>
+					<visible>!Skin.HasSetting(Hide_Home_Tiles)</visible>
+					<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(10001)">Conditional</animation>
+					<width>1920</width>
+					<height>190</height>
+					<orientation>horizontal</orientation>
+					<include>CardDimensions</include>
+					<include>CardLayouts</include>					
+					<onleft>9000</onleft>
+					<onright>10001</onright>
+					<onup>9001</onup>
+					<scrolltime tween="sine">300</scrolltime>
+					<include>Animation_Window_UP</include>
+				
+					<content>
+					<item id="1">
+						<width>292</width>
+						<height>170</height>
+						<label>My Movies</label>
+						
+						<onclick>ActivateWindow(Videos,Movies,return)</onclick> 
+						
+						<icon>-</icon>
+						<property name="ItemColor">matmoviesred</property>
+						<thumb>appcard_movies.png</thumb>
+						<visible>!Skin.HasSetting(hidemovies)</visible>
+					</item>
+					<item id="2">
+						<width>292</width>
+						<height>170</height>
+						<label>My TV Shows</label>
+						<onfocus>SetProperty(ItemColor,matplaygreen,home)</onfocus>
+						<onclick>ActivateWindow(Videos,TvShows,return)</onclick>
+						<icon>-</icon>
+						<property name="ItemColor">matmoviesred</property>
+						<thumb>appcard_tv.png</thumb>
+						<visible>!Skin.HasSetting(hidetv)</visible>
+					</item>
+					<item id="3">
+						<width>292</width>
+						<height>170</height>
+
+						<label>Programs</label>
+						
+						<onclick>ActivateWindow(1133)</onclick>
+						<icon>-</icon>
+						<thumb>appcard_addons.png</thumb>
+						<property name="Color">matplaygreen</property>
+						<visible>!Skin.HasSetting(addbrowser)</visible>
+					</item>
+					<item id="4">
+						<width>292</width>
+						<height>170</height>
+						<label>Video Addons</label>
+						
+						<onclick>ActivateWindow(Videos)</onclick>
+						<icon>-</icon>
+						<property name="ItemColor">matplaygreen</property>
+						<thumb>appcard_videoaddons.png</thumb>
+						<visible>!Skin.HasSetting(hidevideoapp)</visible>
+					</item>
+					<item id="5">
+						<width>292</width>
+						<height>170</height>					
+						<label>31956</label>
+						<onclick>ActivateWindow(Music)</onclick>
+						<icon>-</icon>
+						<property name="Color">matplayorange</property>
+						<thumb>AppCard_Orange.png</thumb>
+						<visible>!Skin.HasSetting(hidemusicapp)</visible>
+					</item>
+
+					<item id="6">
+						<width>292</width>
+						<height>170</height>
+
+						<label>Programs</label>
+						
+						<onclick>ActivateWindow(Programs)</onclick>
+						<icon>-</icon>
+						<thumb>AppCard_Green.png</thumb>
+						<property name="Color">matplaygreen</property>
+						<visible>!Skin.HasSetting(hideprograpp)</visible>
+					</item>
+					</content>
+
+			</control>
+			
+			
+			<control type="panel" id="9002">
+				<visible>!Skin.HasSetting(Hide_Home_Tiles)</visible>
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(9002)">Conditional</animation>
+				<height>250</height>
+				<include>CardDimensions</include>
+				<include>Normal_CardLayouts</include>					
+				<onleft>9000</onleft>
+				<onright>9002</onright>
+				<onup>10002</onup>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>Animation_Window_UP</include>
+				<content>
+					<item id="10000">
+						<label>Favourites</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						
+						<icon>-</icon>
+						<thumb>AppCard_Kodi.png</thumb>
+						<property name="Color">matplaygreen</property>
+						<visible>!Skin.HasSetting(hidefavapp)</visible>
+					</item>
+
+
+					<item id="20000">
+						<label>Youtube</label>
+						<onclick>ActivateWindow(videos,&quot;plugin://plugin.video.youtube&quot;,return)</onclick>
+						
+						<icon>-</icon>
+						<thumb>AppCard_Youtube.png</thumb>
+						<visible>!Skin.HasSetting(hideytapp)</visible>
+					</item>
+					<item id="30000">
+						<label>$INFO[Skin.String(ShelfAddons.1.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.1.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.1.Icon)]</thumb>
+											
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.1.Action))</visible>						
+										
+					</item>
+
+					<item id="40000">
+						<label>$INFO[Skin.String(ShelfAddons.2.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.2.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.2.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.2.Action))</visible>						
+
+
+					</item>
+
+					<item id="50000">
+						<label>$INFO[Skin.String(ShelfAddons.3.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.3.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.3.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.3.Action))</visible>						
+
+					</item>
+
+					<item id="60000">
+						<label>$INFO[Skin.String(ShelfAddons.4.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.4.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.4.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.4.Action))</visible>						
+
+					</item>
+
+					<item id="70000">
+						<label>$INFO[Skin.String(ShelfAddons.5.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.5.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.5.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.5.Action))</visible>						
+				
+
+					</item>
+
+					<item id="80000">
+						<label>$INFO[Skin.String(ShelfAddons.6.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.6.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.6.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.6.Action))</visible>						
+
+					</item>
+					
+					<item id="90000">
+						<label>$INFO[Skin.String(ShelfAddons.7.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.7.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.7.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.7.Action))</visible>						
+
+					</item>
+
+					<item id="100001">
+						<label>$INFO[Skin.String(ShelfAddons.8.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.8.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.8.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.8.Action))</visible>						
+
+					</item>
+
+					<item id="11000">
+						<label>$INFO[Skin.String(ShelfAddons.9.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.9.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.9.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.9.Action))</visible>						
+
+					</item>
+					
+					
+					<item id="12000">
+						<label>$INFO[Skin.String(ShelfAddons.10.Label)]</label>
+						<onclick>$INFO[Skin.String(ShelfAddons.10.Action)]</onclick>
+						<icon>-</icon>
+						<thumb>$INFO[Skin.String(ShelfAddons.10.Icon)]</thumb>
+						<visible>!String.IsEmpty(Skin.String(ShelfAddons.10.Action))</visible>						
+
+					</item>
+					
+				</content>
+			</control>
+
+			
+			
+			
+			
+			
+			<control type="label" id="997">
+				<width>1000</width>
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter1)]</label>
+				<visible>control.hasfocus(9007)</visible>
+				<include>CardLabel</include>
+				
+			</control>
+			
+			<control type="fixedlist" id="9007">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(9007)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(9007)">Conditional</animation>
+				<include>HomePosterLayout</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-2),$LOCALIZE[31159])">FlexDimensions</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-2),$LOCALIZE[31159])">FlexLayout</include>
+				<onup>9001</onup>
+				<onleft>9000</onleft>
+				<onright>9007</onright>
+				<ondown>9008</ondown>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>Animation_Window_Down</include>
+				<oninfo condition="!Containter(9007).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,Name=$INFO[Container(9007).Listitem(0).Label] $INFO[Container(9007).Listitem(0).Year])</oninfo>
+				<oninfo condition="Containter(9007).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(9007).Listitem(0).DBID])</oninfo>
+				
+				
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter1))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter1)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter1)]</content>
+				
+			</control>
+
+			<control type="label" id="998">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter2)]</label>
+				<visible>control.hasfocus(9008)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+
+			<control type="fixedlist" id="9008">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(9008)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(9008)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<include condition="Control.hasFocus(9008)">Animation_Window_Down</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-2),$LOCALIZE[31159])">FlexDimensions</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-2),$LOCALIZE[31159])">FlexLayout</include>
+				<oninfo condition="!Containter(9008).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,Name=$INFO[Container(9008).Listitem(0).Label] $INFO[Container(9008).Listitem(0).Year])</oninfo>
+				<oninfo condition="Containter(9008).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(9008).Listitem(0).DBID])</oninfo>
+				<onup>9007</onup>
+				<onleft>9000</onleft>
+				<onright>9008</onright>
+				<ondown>9009</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter2))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter2)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter2)]</content>
+
+			</control>
+
+			<control type="label" id="999">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter3)]</label>
+				<visible>control.hasfocus(9009)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="9009">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(9009)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(9009)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter3))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter3)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter3)]</content>
+
+
+			</control>
+			<control type="label" id="9990">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter4)]</label>
+				<visible>control.hasfocus(90091)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90091">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90091)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90091)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter4))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter4)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter4)]</content>
+
+
+			</control>
+			
+			<control type="label" id="9991">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter5)]</label>
+				<visible>control.hasfocus(90092)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90092">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90092)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90092)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter5))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter5)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter5)]</content>
+
+
+			</control>
+
+			<control type="label" id="9992">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter6)]</label>
+				<visible>control.hasfocus(90093)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90093">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90093)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90093)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter6))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter6)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter6)]</content>
+
+
+			</control>	
+
+			<control type="label" id="9993">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter7)]</label>
+				<visible>control.hasfocus(90094)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90094">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90094)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90094)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter7))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter7)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter7)]</content>
+
+
+			</control>	
+			<control type="label" id="9994">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter8)]</label>
+				<visible>control.hasfocus(90095)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90095">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90095)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90095)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter8))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter8)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter8)]</content>
+
+
+			</control>	
+			<control type="label" id="9995">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter9)]</label>
+				<visible>control.hasfocus(90096)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90096">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90096)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90096)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter9))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter9)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter9)]</content>
+
+
+			</control>	
+			<control type="label" id="9996">
+				<label>$INFO[Container(9000).ListItem.Property(widgetName.personalposter10)]</label>
+				<visible>control.hasfocus(90097)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+				<width>1000</width>
+			</control>
+			 
+
+			<control type="fixedlist" id="90097">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90097)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90097)">Conditional</animation>
+				<scrolltime tween="sine">300</scrolltime>
+				<include>HomePosterLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+				<onup>9008</onup>
+				<onleft>9000</onleft>
+				<onright>9009</onright>
+				<ondown>90091</ondown>
+				<include>Animation_Window_Down</include>
+
+				<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetPath.personalposter10))</visible>
+				<content target="$INFO[Container(9000).ListItem.Property(widgetTarget.personalposter10)]">$INFO[Container(9000).ListItem.Property(widgetPath.personalposter10)]</content>
+
+
+			</control>				
+<!-- 			<control type="label" id="9992">
+				<label>$INFO[Skin.String(1-WidgetLabel-6)]</label>
+				<visible>control.hasfocus(90093)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+			</control>
+			 
+
+			<control type="fixedlist" id="90093">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90093)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90093)">Conditional</animation>
+				<scrolltime>200</scrolltime>
+				<include condition="IsEmpty(Skin.String(1-WidgetAccent-6)">>HomePosterLayout</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),teal)]">HomePosterLayout_teal</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),aqua)]">HomePosterLayout_aqua</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),purple)]">HomePosterLayout_purple</include>
+
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),grey)]">HomePosterLayout</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),red)]">HomePosterLayout_red</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),green)]">HomePosterLayout_green</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),blue)]">HomePosterLayout_blue</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-6),orange)]">HomePosterLayout_orange</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31159])">FlexDimensions</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-6),$LOCALIZE[31159])">FlexLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+					<onup>90092</onup>
+					<onleft>90093</onleft>
+				<onright>90093</onright>
+				<ondown>90094</ondown>
+				<oninfo condition="!Containter(90093).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,Name=$INFO[Container(90093).Listitem(0).Label] $INFO[Container(90093).Listitem(0).Year])</oninfo>
+				<oninfo condition="Containter(90093).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(90093).Listitem(0).DBID])</oninfo>
+				<visible>Skin.String(1-WidgetList-6)</visible>
+				<content target="$INFO[Skin.String(1-WidgetCustomType-6)]">$INFO[Skin.String(1-WidgetList-6)]</content>
+
+
+			</control>
+			
+			<control type="label" id="9993">
+				<label>$INFO[Skin.String(1-WidgetLabel-7)]</label>
+				<visible>control.hasfocus(90094)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+			</control>
+			 
+
+			<control type="fixedlist" id="90094">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90094)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90094)">Conditional</animation>
+				<scrolltime>200</scrolltime>
+				<include condition="IsEmpty(Skin.String(1-WidgetAccent-7)">>HomePosterLayout</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),teal)]">HomePosterLayout_teal</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),aqua)]">HomePosterLayout_aqua</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),purple)]">HomePosterLayout_purple</include>
+
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),grey)]">HomePosterLayout</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),red)]">HomePosterLayout_red</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),green)]">HomePosterLayout_green</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),blue)]">HomePosterLayout_blue</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-7),orange)]">HomePosterLayout_orange</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31159])">FlexDimensions</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-7),$LOCALIZE[31159])">FlexLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+					<onup>90093</onup>
+					<onleft>90094</onleft>
+				<onright>90094</onright>
+				<ondown>90095</ondown>
+				<oninfo condition="!Containter(90094).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,Name=$INFO[Container(90094).Listitem(0).Label] $INFO[Container(90094).Listitem(0).Year])</oninfo>
+				<oninfo condition="Containter(90094).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(90094).Listitem(0).DBID])</oninfo>
+				<visible>Skin.String(1-WidgetList-7)</visible>
+				<content target="$INFO[Skin.String(1-WidgetCustomType-7)]">$INFO[Skin.String(1-WidgetList-7)]</content>
+
+
+			</control>
+			
+			<control type="label" id="9994">
+				<label>$INFO[Skin.String(1-WidgetLabel-8)]</label>
+				<visible>control.hasfocus(90095)</visible>
+				<include>CardLabel</include>
+				<top>100</top>
+			</control>
+			 
+
+			<control type="fixedlist" id="90095">
+				<animation effect="zoom" end="105,105" time="200" condition="Control.hasFocus(90092)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-20,0" time="200" condition="Control.HasFocus(90092)">Conditional</animation>
+				<scrolltime>200</scrolltime>
+				<include condition="IsEmpty(Skin.String(1-WidgetAccent-8)">>HomePosterLayout</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),teal)]">HomePosterLayout_teal</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),aqua)]">HomePosterLayout_aqua</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),purple)]">HomePosterLayout_purple</include>
+
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),grey)]">HomePosterLayout</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),red)]">HomePosterLayout_red</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),green)]">HomePosterLayout_green</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),blue)]">HomePosterLayout_blue</include>
+				<include condition="[StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31160]) + StringCompare(Skin.String(1-WidgetAccent-8),orange)]">HomePosterLayout_orange</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31159])">FlexDimensions</include>
+				<include condition="StringCompare(Skin.String(1-WidgetView-8),$LOCALIZE[31159])">FlexLayout</include>
+				<onfocus>Skin.SetString(HomeFanart,$INFO[ListItem.Art(fanart)])</onfocus>
+					<onup>90094</onup>
+					<onleft>90095</onleft>
+				<onright>90095</onright>
+				<ondown>9010</ondown>
+				<oninfo condition="!Containter(90092).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,Name=$INFO[Container(90092).Listitem(0).Label] $INFO[Container(9009).Listitem(0).Year])</oninfo>
+				<oninfo condition="Containter(90092).Listitem(0).DBID">RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(90092).Listitem(0).DBID])</oninfo>
+				<visible>Skin.String(1-WidgetList-8)</visible>
+				<content target="$INFO[Skin.String(1-WidgetCustomType-8)]">$INFO[Skin.String(1-WidgetList-8)]</content>
+
+
+			</control>
+ -->
+			<control type="list" id="9010">
+				<include>Animation_Window_Down</include>
+
+				<include>settingsDimensions</include>
+				<include>SettingsRowLayouts</include>					
+				<onleft>9008</onleft>
+				<onright>9008</onright>
+				<content>
+					<item id="1">
+						<label>Settings</label>
+						<icon>ic_settings_settings.png</icon>
+						<thumb>ic_settings_settings.png</thumb>
+						<onclick>ActivateWindow(Settings)</onclick>
+						<visible>true</visible>
+
+					</item>
+					<item id="2">
+						<label>File Manager</label>
+						<icon>icon2.png</icon>
+						<thumb>ic_controller.png</thumb>
+						<onclick>ActivateWindow(Filemanager)</onclick>
+
+					</item>
+					
+					<item id="3">
+						<label>Shutdown</label>
+						<icon>shutdownicon.png</icon>
+						<thumb>shutdownicon.png</thumb>
+						<onclick>ActivateWindow(shutdownmenu)</onclick>
+					</item>						
+				</content>
+			</control>
+		</control>
+		<!-- Left Panel Group -->
+		<control type="group">
+		<control type="group" id="10">
+				<posx>-400</posx>
+				<width>400</width>
+				<height>1080</height>
+				<animation effect="slide" time="300" start="-600,0" end="400,0">Focus</animation>
+				<animation effect="slide" time="300" start="400,0" end="-600,0">UnFocus</animation>
+				<onright>9500</onright>
+				<control type="image">
+						
+					<animation effect="slide" time="300" start="-600,0" end="400,0">Focus</animation>
+					<animation effect="slide" time="300" start="400,0" end="-600,0">UnFocus</animation>
+					<texture colordiffuse="tiles">bg_FileMode.png</texture>
+					<top>0</top>
+
+				</control>
+
+				<control type="fixedlist" id="9000">
+						
+						
+						<left>50</left>
+						<top>300</top>
+						<width>300</width>
+						<height>1080</height>
+						<onright>9500</onright>
+						<focusposition>3</focusposition>
+						<pagecontrol>60</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<include>CommonLayout</include>
+						<onleft condition="Control.IsVisible(9000)">9500</onleft>
+						
+						<content>
+							<include>skinshortcuts-mainmenu</include>
+						</content>
+
+					</control>
+				</control>
+		</control>
+
+		<include>MediaControls_home</include>
+		<control type="image">
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>debuggrid1080.png</texture>
+			<!--width>1920</width>
+			<height>1080</height>
+			<texture>special://skin/debuggrid1080.png</texture-->
+		</control>
+		
+		<!-- Preload widgets -->
+		<!-- Splash -->
+		<control type="group">
+			<visible>Container(9001).IsUpdating + String.IsEmpty(Window(home).Property(ReloadTriggered))</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture colordiffuse="black">white.png</texture>
+			</control>
+			<control type="image">
+				<left>553</left>
+				<top>433</top>
+				<width>814</width>
+				<height>214</height>
+				<texture>special://skin/extras/loading.gif</texture>
+			</control>
+			<control type="label">
+				<font>card30</font>
+				<top>765</top>
+				<textcolor>white</textcolor>
+				<width>1920</width>
+				<align>center</align>		
+				<label>Loading Widgets...</label>
+			</control>
+		</control>
+		<!-- LOADING ANIMATONS -->
+		<control type="group">
+				<visible>Window.Next(videos) + Skin.HasSetting(show_transitions)</visible>
+				<animation effect="zoom" start="0,960" end="55000,55000" center="auto" time="200" condition="Window.Next(videos) + Skin.HasSetting(show_transitions)">Conditional</animation>
+				<animation effect="slide" end="-5.5,-5"  time="25" condition="Window.Next(videos) + Skin.HasSetting(show_transitions)">Conditional</animation>
+ 				<control type="image" id="1">
+					<animation effect="zoom" end="110,110" center="auto" time="200">Focus</animation>
+					  
+						<left>960</left>
+						<top>540</top>
+						<width>10</width>
+						<height>10</height>
+						<aspectratio>fit</aspectratio>
+						<texture colordiffuse="matmoviesred">googleanimation.png</texture>
+				</control>				
+		</control>	
+		<control type="group">
+				<visible>Window.Next(programs) + Skin.HasSetting(show_transitions)</visible>
+				<animation effect="zoom" start="0,960" end="55000,55000" center="auto" time="200" condition="Window.Next(programs) + Skin.HasSetting(show_transitions)">Conditional</animation>
+				<animation effect="slide" end="-5.5,-5"  time="25" condition="Window.Next(programs) + Skin.HasSetting(show_transitions)">Conditional</animation>
+ 				<control type="image" id="1">
+					<animation effect="zoom" end="110,110" center="auto" time="200">Focus</animation>
+					 
+						<left>960</left>
+						<top>540</top>
+						<width>10</width>
+						<height>10</height>
+						<aspectratio>fit</aspectratio>
+						<texture colordiffuse="matplaygreen">googleanimation.png</texture>
+				</control>				
+		</control>
+		<control type="group">
+				<visible>Window.Next(music) + Skin.HasSetting(show_transitions)</visible>
+				<animation effect="zoom" start="0,960" end="55000,55000" center="auto" time="200" condition="Window.Next(music) + Skin.HasSetting(show_transitions)">Conditional</animation>
+				<animation effect="slide" end="-5.5,-5"  time="25" condition="Window.Next(music) + Skin.HasSetting(show_transitions)">Conditional</animation>
+ 				<control type="image" id="1">
+					<animation effect="zoom" end="110,110" center="auto" time="200">Focus</animation>
+					  
+						<left>960</left>
+						<top>540</top>
+						<width>10</width>
+						<height>10</height>
+						<aspectratio>fit</aspectratio>
+						<texture colordiffuse="matplayorange">googleanimation.png</texture>
+				</control>				
+		</control>
+		<control type="group">
+				<visible>Window.Next(1133) + Skin.HasSetting(show_transitions)</visible>
+				<animation effect="zoom" start="0,960" end="55000,55000" center="auto" time="200" condition="Window.Next(1133) + Skin.HasSetting(show_transitions)">Conditional</animation>
+				<animation effect="slide" end="-5.5,-5"  time="25" condition="Window.Next(1133) + Skin.HasSetting(show_transitions)">Conditional</animation>
+ 				<control type="image" id="1">
+						<animation effect="zoom" end="110,110" center="auto" time="200">Focus</animation>
+					  
+						<left>960</left>
+						<top>540</top>
+						<width>10</width>
+						<height>10</height>
+						<aspectratio>fit</aspectratio>
+						<texture colordiffuse="Material_Teal">googleanimation.png</texture>
+				</control>				
+		</control>
+		
+	</controls>
+</window>

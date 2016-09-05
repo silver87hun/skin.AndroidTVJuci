@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="TriPanel">
+	<control type="group">
+		<visible>Control.IsVisible(52)</visible>
+		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+			<effect type="zoom" start="125" end="100" center="auto" time="300" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+		</animation>
+
+		<control type="group">
+
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<visible>true</visible>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			
+			<fadetime>FanartCrossfadeTime</fadetime>
+		
+		</control>
+		<control type="image" description="Busy BG">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>solidshadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<control type="label">
+			<description>time label</description>
+			<top>50</top>
+			<right>50</right>
+			<width>200</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>clock</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[System.Time(hh:mm)]</label>
+		</control>
+		<include>MediaControls</include>
+		
+		
+			<!-- 		BEGINS PANEL -->
+			<control type="image">
+				<left>0</left>
+				<top>200</top>
+				<width>1920</width>
+				<height>800</height>
+
+				<texture>solidshadow.png</texture>
+			</control>	
+		
+			<control type="image">
+				<left>25</left>
+				<top>250</top>
+				<width>450</width>
+				<height>700</height>
+				<aspectratio aligny="center">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultFolder.png">$VAR[PosterImageVar]</texture>
+				<visible>Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)</visible>
+			</control>
+			<control type="image">
+				<left>25</left>
+				<top>250</top>
+				<width>450</width>
+				<height>450</height>
+				<aspectratio aligny="center">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultFolder.png">$VAR[PosterImageVar]</texture>
+				<visible>![Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			</control>
+			<control type="group">
+				<control type="textbox">
+					<left>1400</left>
+					<top>600</top>
+					<width>500</width>
+					<height>350</height>
+					<font>cardplot</font>
+					<autoscroll delay="10000" time="4000" repeat="10000">!Skin.HasSetting(noautoscroll)</autoscroll>
+					<label>$VAR[VideoDescription]</label>
+					<textcolor>white</textcolor>
+				</control>
+			</control>		
+			<control type="image">
+				<top>250</top>
+				<posx>1400</posx>
+				<height>280</height>
+				<width>500</width>
+				<fadetime>200</fadetime>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$VAR[ListInfoBoxImageVar]</texture>
+			</control>		
+
+
+
+		</control>
+
+		<control type="list" id="52">
+			<left>500</left>
+			<top>250</top>
+			<width>850</width>
+			<height>700</height>
+
+			<onleft>2</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+
+			<viewtype label="TriPanel">list</viewtype>
+
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="70" width="800">
+				<control type="image">
+					<left>815</left>
+					<top>17</top>
+					<width>32</width>
+					<height>32</height>
+					<texture>$VAR[PercentWatched_2]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+
+				<control type="label">
+					<left>25</left>
+					<top>0</top>
+					<width>810</width>
+					<height>70</height>
+					<font>card30</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="70" width="800">
+				<control type="image">
+					<left>10</left>
+					<top>0</top>
+					<width>1090</width>
+					<height>70</height>
+					<texture>show_card.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+
+
+				<control type="label">
+					<left>25</left>
+					<top>0</top>
+					<width>810</width>
+					<height>70</height>
+					<font>card30</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<left>815</left>
+					<top>17</top>
+					<width>32</width>
+					<height>32</height>
+					<texture>$VAR[PercentWatched_2]</texture>
+					<aspectratio>keep</aspectratio>
+
+				</control>
+			</focusedlayout>
+		</control>
+
+	</control>
+
+
+</include>
+</includes>

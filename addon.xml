@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.AndroidTV"
+  version="1.1.0"
+  name="Android TV"
+  provider-name="ZeN">
+  <requires>
+    <import addon="xbmc.gui" version="5.12.0"/>
+		<import version="0.4.0" addon="script.skinshortcuts"/>
+		<import version="0.1.0" addon="service.library.data.provider"/>
+		<import version="12.0.29" addon="script.artwork.downloader" />
+		<import version="1.0.0" addon="script.skin.helper.service" />
+		<import version="5.0.0" addon="script.globalsearch"/>
+		<import version="0.0.5" addon="script.image.resource.select"/>
+		<import version="1.0.0" addon="script.toolbox"/>
+		<import version="1.0.1" addon="plugin.program.autocompletion"/>
+		<import version="0.0.6" addon="resource.images.weathericons.white"/>
+	</requires>
+  <extension
+    point="xbmc.gui.skin"
+    debugging="false"
+    effectslowdown="1.0">
+	<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+ </extension>
+  <extension point="xbmc.addon.metadata">
+     <platform>all</platform>
+  </extension>
+</addon>

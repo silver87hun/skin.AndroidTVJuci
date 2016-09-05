@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+
+    <shortcut>
+        <label>19020</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>livetv</defaultID>
+        <icon>special://skin/extras/icons/livetv.png</icon>
+        <action>ActivateWindow(TVChannels,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>1</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>picture</defaultID>
+        <icon>special://skin/extras/icons/pictures.png</icon>
+        <action>ActivateWindow(Pictures,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>8</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>weather</defaultID>
+        <icon>special://skin/extras/icons/sun.png</icon>
+        <action>ActivateWindow(Weather)</action>
+    </shortcut>
+    <shortcut>
+        <label>LibreELEC</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>libreelec</defaultID>
+        <icon>special://skin/extras/icons/libreelec.png</icon>
+        <action>RunAddon(service.libreelec.settings)</action>
+        <visible>System.HasAddon(service.libreelec.settings)</visible>
+    </shortcut>
+    <shortcut>
+        <label>OpenELEC</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>openelec</defaultID>
+        <icon>special://skin/extras/icons/openelec.png</icon>
+        <action>RunAddon(service.openelec.settings)</action>
+        <visible>System.HasAddon(service.openelec.settings)</visible>
+    </shortcut>
+</shortcuts>

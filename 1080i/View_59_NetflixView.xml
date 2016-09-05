@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Netflix_View">
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<include>CommonBackground</include>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="zoom" start="125" end="100" center="auto" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+			</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<aspectratio>scale</aspectratio>
+				<visible>true</visible>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				
+				<fadetime>FanartCrossfadeTime</fadetime>
+				
+			</control>
+
+			<control type="image" description="Busy BG">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>solidshadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="label">
+				<description>time label</description>
+				<top>50</top>
+				<right>50</right>
+				<width>200</width>
+				<height>30</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>clock</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[System.Time(hh:mm)]</label>
+			</control>
+			<include>MediaControls</include>
+			<control type="group">
+
+				<width>1920</width>
+				<height>1080</height>
+				<control type="wraplist" id="59">
+					<visible>true</visible>
+					<left>-230</left>
+					<top>850</top>
+					<width>2500</width>
+					<height>1080</height>
+					<onup>11</onup>
+					<ondown>9001</ondown>
+					<orientation>horizontal</orientation>
+					<align>center</align>
+					<focusposition>3</focusposition>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="sine">300</scrolltime>
+					<itemgap>10</itemgap>
+					<include>FlexLayout_Small_Thumbs</include>
+					<viewtype label="Netflix View">list</viewtype>
+					<visible>!Container.Content(files)</visible>
+				</control>
+
+				<!--Item 2 Group -->
+
+				<control type="label">
+					<left>0</left>
+					<top>50</top>
+					<width>1920</width>
+					<height>88</height>
+					<font>card_condensed_48</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+
+					<align>center</align>
+					<aligny>Top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[Listitem.Label]</label>
+					<visible>!Skin.HasSetting(show_views_clearlogos)</visible>
+				</control>
+				<control type="image">
+					<left>710</left>
+					<top>5</top>
+
+					<height>175</height>
+					<width>500</width>
+					<fadetime>200</fadetime>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$VAR[ClearLogoVar]</texture>
+					<visible>Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>50</top>
+					<width>1920</width>
+					<height>88</height>
+					<font>card_condensed_48</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+
+					<align>center</align>
+					<aligny>Top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[Listitem.Label]</label>
+					<visible>Skin.HasSetting(show_views_clearlogos) + ![Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+				</control>
+
+				<control type="label">
+					<left>0</left>
+					<top>100</top>
+					<width>1920</width>
+					<height>88</height>
+					<font>card30</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<aligny>Top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					<visible>[Window.IsVisible(AddonBrowser) | Container.Content(addons)]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>25</top>
+					<width>1920</width>
+					<height>88</height>
+					<font>card30</font>
+					<textcolor>matgrey</textcolor>
+					<align>center</align>
+					<aligny>Top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[ListItem.Genre]</label>
+					<visible>!Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>25</top>
+					<width>1920</width>
+					<height>88</height>
+					<font>card30</font>
+					<textcolor>matgrey</textcolor>
+					<align>center</align>
+					<aligny>Top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[ListItem.Genre]</label>
+					<visible>Skin.HasSetting(show_views_clearlogos) + ![Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>25</top>
+					<width>1920</width>
+					<height>88</height>
+					<font>card30</font>
+					<textcolor>matgrey</textcolor>
+					<align>center</align>
+					<aligny>Top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$INFO[ListItem.Genre]</label>
+					<visible>!Skin.HasSetting(show_views_clearlogos) + !IsEmpty(ListItem.Genre)</visible>
+				</control>
+			<control type="image">
+				<left>880</left>
+				<top>108</top>
+				<height>48</height>
+				<width>48</width>
+				<texture colordiffuse="netflixred">$VAR[Flagstar1]</texture>
+				<visible>!IsEmpty(ListItem.Rating)+!Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+			</control>
+
+			<control type="image">
+				<left>910</left>
+				<top>108</top>
+
+				<height>48</height>
+				<width>48</width>
+
+				<texture colordiffuse="netflixred">$VAR[Flagstar2]</texture>
+				<visible>!IsEmpty(ListItem.Rating)+!Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+
+			</control>
+			<control type="image">
+				<left>940</left>
+				<top>108</top>
+
+				<height>48</height>
+				<width>48</width>
+
+				<texture colordiffuse="netflixred">$VAR[Flagstar3]</texture>
+				<visible>!IsEmpty(ListItem.Rating)+!Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+
+			</control>
+			<control type="image">
+				<left>970</left>
+				<top>108</top>
+
+				<height>48</height>
+				<width>48</width>
+
+				<texture colordiffuse="netflixred">$VAR[Flagstar4]</texture>
+				<visible>!IsEmpty(ListItem.Rating)+!Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+
+			</control>
+			<control type="image">
+				<left>1000</left>
+				<top>108</top>
+
+				<height>48</height>
+				<width>48</width>
+				<texture colordiffuse="netflixred">$VAR[Flagstar5]</texture>
+				<visible>!IsEmpty(ListItem.Rating)+!Skin.HasSetting(show_views_clearlogos) + [Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)]</visible>
+
+			</control>
+
+				<control type="image">
+					
+					<left>200</left>
+					<top>200</top>
+					<width>325</width>
+					<height>500</height>
+					<texture background="true">$VAR[PosterImageVar]</texture>
+					<aspectratio>scale</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+				</control>				
+				<control type="textbox">
+					
+					<left>600</left>
+					<top>200</top>
+					<width>800</width>
+					<height>500</height>
+					<align>justify</align>
+					<font>cardplot</font>
+					<textcolor>white</textcolor>
+					<label>$VAR[VideoDescription]</label>
+					<autoscroll delay="10000" time="4000" repeat="10000">!Skin.HasSetting(noautoscroll)</autoscroll>
+					<visible>Skin.HasSetting(show_plot)</visible>
+				</control>
+			</control>
+		</control>
+
+	</include>
+</includes>
+
+
+
+

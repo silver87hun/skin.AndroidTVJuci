@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Google-play">
+		<control type="group">
+		<visible>Control.IsVisible(552)</visible>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<texture>special://skin/backgrounds/SKINDEFAULT.png</texture>
+			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
+			
+		</control>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[ListItem.Art(fanart)]</texture>
+		</control>
+
+			<control type="group" id="10">
+				<posx>0</posx>
+				<width>400</width>
+				<height>1080</height>
+				<visible>Control.IsVisible(552)</visible>
+				<animation effect="slide" time="1" start="0,0" end="-600,0">UnFocus</animation>
+				
+				<onright>9500</onright>
+				<control type="image">
+
+					
+					<animation effect="slide" time="1" start="0,0" end="-600,0">UnFocus</animation>
+					<texture colordiffuse="matmoviesred">bg_FileMode.png</texture>
+
+					<top>0</top>
+
+
+				</control>
+				<control type="button" id="98">
+					<onfocus condition="StringCompare(Container(552).CurrentItem,1)">Control.SetFocus(553)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,2)">Control.SetFocus(554)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,3)">Control.SetFocus(555)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,4)">Control.SetFocus(556)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,5)">Control.SetFocus(557)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,6)">Control.SetFocus(558)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,7)">Control.SetFocus(559)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,8)">Control.SetFocus(560)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,9)">Control.SetFocus(561)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,10)">Control.SetFocus(562)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,11)">Control.SetFocus(563)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,12)">Control.SetFocus(564)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,13)">Control.SetFocus(565)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,14)">Control.SetFocus(566)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,15)">Control.SetFocus(567)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,16)">Control.SetFocus(568)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,17)">Control.SetFocus(569)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,18)">Control.SetFocus(570)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,19)">Control.SetFocus(571)</onfocus>
+					<onfocus condition="StringCompare(Container(552).CurrentItem,20)">Control.SetFocus(572)</onfocus>
+					<texture>-</texture>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+
+				</control>
+				<control type="fixedlist" id="552">
+
+
+					<left>50</left>
+					<top>300</top>
+					<width>300</width>
+					<height>1080</height>
+					<onright>98</onright>
+					<onleft>2</onleft>
+					<focusposition>3</focusposition>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<include>CommonLayout</include>
+					<viewtype label="Google Play">list</viewtype>
+					<onleft condition="Control.IsVisible(552)">552</onleft>
+				</control>
+			</control>
+		</control>			
+
+
+		<control type="list" id="553">
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<visible>Container(552).ListitemAbsolute(1).isFolder</visible>
+			<onleft>552</onleft>					
+
+			<width>1920</width>
+			<height>550</height>
+			
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>400</top>
+			<include condition="!Container.Content(Episodes) + !Container.Content(Seasons)">HomePosterLayout_View_Google</include>
+			<include condition="Container.Content(Episodes) | Container.Content(Seasons)">HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(1).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>				
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+
+		<control type="list" id="554">
+			<visible>Container(552).ListitemAbsolute(2).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+
+			<width>1920</width>
+			<height>550</height>
+			
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(2).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="555">
+			<visible>Container(552).ListitemAbsolute(3).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>1400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(3).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>		
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="556">
+			<visible>Container(552).ListitemAbsolute(4).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>1900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(4).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="557">
+			<visible>Container(552).ListitemAbsolute(5).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>2400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(5).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="558">
+			<visible>Container(552).ListitemAbsolute(6).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>2900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(6).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="559">
+			<visible>Container(552).ListitemAbsolute(7).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>3400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(7).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="560">
+			<visible>Container(552).ListitemAbsolute(8).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>3900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(8).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="561">
+			<visible>Container(552).ListitemAbsolute(9).isFolder</visible>
+
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<onleft>552</onleft>					
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+
+			<top>4400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+
+			<onup>552</onup>
+
+
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(9).FolderPath]</content>
+
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+
+
+
+			<!-- Oninfo commands -->
+			<!-- Focus animations -->
+
+
+		</control>					
+
+		<control type="list" id="562">
+			<visible>Container(552).ListitemAbsolute(10).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>4900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(10).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+		<control type="list" id="563">
+			<visible>Container(552).ListitemAbsolute(11).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>5400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(11).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+		<control type="list" id="564">
+			<visible>Container(552).ListitemAbsolute(12).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>5900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(12).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+		<control type="list" id="565">
+			<visible>Container(552).ListitemAbsolute(13).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>6400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(13).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+		<control type="list" id="566">
+			<visible>Container(552).ListitemAbsolute(14).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>6900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(14).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+		<control type="list" id="567">
+			<visible>Container(552).ListitemAbsolute(15).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>7400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(15).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+		<control type="list" id="568">
+			<visible>Container(552).ListitemAbsolute(16).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>7900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(16).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+		<control type="list" id="569">
+			<visible>Container(552).ListitemAbsolute(17).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>8400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(17).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+		<control type="list" id="570">
+			<visible>Container(552).ListitemAbsolute(18).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>8900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(18).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+		<control type="list" id="571">
+			<visible>Container(552).ListitemAbsolute(19).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>9400</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(19).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+		<control type="list" id="572">
+			<visible>Container(552).ListitemAbsolute(20).isFolder</visible>
+			<animation effect="slide" start="0,0" end="360,0" time="1" condition="Control.HasFocus(552)">Conditional</animation>
+			<width>1920</width>
+			<height>550</height>
+			<onup>552</onup>
+			<left>50</left>
+			<onleft>552</onleft>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<top>9900</top>
+			<include>HomePosterLayout_View_Google</include>
+			<viewtype label="CardView">list</viewtype>
+			<onup>552</onup>
+			<content target="videos">$INFO[Container(552).ListitemAbsolute(20).FolderPath]</content>
+			<!-- Onfocus commands -->
+			<!-- Onclick commands -->
+
+
+			<animation effect="slide" end="0,0" time="150" condition="StringCompare(Container(552).CurrentItem,1)">Conditional</animation>
+			<animation effect="slide" end="0,-500" time="150" condition="StringCompare(Container(552).CurrentItem,2)">Conditional</animation>
+			<animation effect="slide" end="0,-1000" time="150" condition="StringCompare(Container(552).CurrentItem,3)">Conditional</animation>
+			<animation effect="slide" end="0,-1500" time="150" condition="StringCompare(Container(552).CurrentItem,4)">Conditional</animation>
+			<animation effect="slide" end="0,-2000" time="150" condition="StringCompare(Container(552).CurrentItem,5)">Conditional</animation>
+			<animation effect="slide" end="0,-2500" time="150" condition="StringCompare(Container(552).CurrentItem,6)">Conditional</animation>
+			<animation effect="slide" end="0,-3000" time="150" condition="StringCompare(Container(552).CurrentItem,7)">Conditional</animation>
+			<animation effect="slide" end="0,-3500" time="150" condition="StringCompare(Container(552).CurrentItem,8)">Conditional</animation>
+			<animation effect="slide" end="0,-4000" time="150" condition="StringCompare(Container(552).CurrentItem,9)">Conditional</animation>
+			<animation effect="slide" end="0,-4500" time="150" condition="StringCompare(Container(552).CurrentItem,10)">Conditional</animation>
+			<animation effect="slide" end="0,-5000" time="150" condition="StringCompare(Container(552).CurrentItem,11)">Conditional</animation>
+			<animation effect="slide" end="0,-5500" time="150" condition="StringCompare(Container(552).CurrentItem,12)">Conditional</animation>
+			<animation effect="slide" end="0,-6000" time="150" condition="StringCompare(Container(552).CurrentItem,13)">Conditional</animation>
+			<animation effect="slide" end="0,-6500" time="150" condition="StringCompare(Container(552).CurrentItem,14)">Conditional</animation>
+			<animation effect="slide" end="0,-7000" time="150" condition="StringCompare(Container(552).CurrentItem,15)">Conditional</animation>
+			<animation effect="slide" end="0,-7500" time="150" condition="StringCompare(Container(552).CurrentItem,16)">Conditional</animation>
+			<animation effect="slide" end="0,-8000" time="150" condition="StringCompare(Container(552).CurrentItem,17)">Conditional</animation>
+			<animation effect="slide" end="0,-8500" time="150" condition="StringCompare(Container(552).CurrentItem,18)">Conditional</animation>
+			<animation effect="slide" end="0,-9000" time="150" condition="StringCompare(Container(552).CurrentItem,19)">Conditional</animation>
+			<animation effect="slide" end="0,-9500" time="150" condition="StringCompare(Container(552).CurrentItem,20)">Conditional</animation>					
+		</control>					
+
+	</include>					
+</includes>

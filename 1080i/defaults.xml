@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<default type="image">
+		<left>0</left>
+		<top>0</top>
+		<texture>-</texture>
+		<colorkey>0</colorkey>
+	</default>
+	<default type="label">
+		<label>-</label>
+		<font>card28</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+	</default>
+	<default type="fadelabel">
+		<left>80</left>
+		<top>60</top>
+		<font>card28</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+	</default>
+	<default type="button">
+		<width>250</width>
+		<height>42</height>
+		<texturefocus border="10">common/button.png</texturefocus>
+					
+		<textcolor>white</textcolor>
+		<focusedcolor>selectedfocus</focusedcolor>		
+		<texturefocus>-</texturefocus>
+		<pulseonselect>false</pulseonselect>
+		<font>card25</font>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+	</default>
+	
+	<default type="radiobutton">
+		<width>300</width>
+		<height>42</height>
+		<radiowidth>120</radiowidth>
+		<radioheight>76</radioheight>
+		<textureradioonfocus>buttons/radio-on.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/radio-on.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/radio-off.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/radio-off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="grey3">buttons/radio-button-on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="grey3">buttons/radio-button-off.png</textureradiooffdisabled>
+		<texturefocus colordiffuse="selectedfocus">settingsitem_focused.png</texturefocus>
+		<texturenofocus border="40">-</texturenofocus>
+		<font>card25</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>7</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	
+	
+	<default type="radiobutton_settings">
+					<height>50</height>
+					<width>885</width>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>340</textwidth>
+					<align>left</align>
+					<font>card25</font>
+					<textcolor>white</textcolor>
+					<focusedcolor>selectedfocus</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					<radiowidth>95</radiowidth>
+					<radioheight>50</radioheight>
+					<radioposx>850</radioposx>
+					<radioposy>0</radioposy>
+					<textureradioonfocus colordiffuse="selectedfocus">buttons/radio-on.png</textureradioonfocus> <!-- ON focus -->
+					<textureradioonnofocus colordiffuse="selectedfocus">buttons/radio-on.png</textureradioonnofocus> <!-- ON no focus -->
+					<textureradioofffocus colordiffuse="grey3">buttons/radio-off.png</textureradioofffocus> <!-- OFF focus -->
+					<textureradiooffnofocus colordiffuse="grey3">buttons/radio-off.png</textureradiooffnofocus>  <!-- OFF no focus -->
+
+	</default>
+	<default type="togglebutton">
+		<left>140</left>
+		<top>167</top>
+		<width>20</width>
+		<height>20</height>
+		<texturefocus colordiffuse="grey3">white.png</texturefocus>
+					
+		<textcolor>white</textcolor>
+		<focusedcolor>selectedfocus</focusedcolor>		
+		<label>-</label>
+		<font>card25</font>
+		<disabledcolor>grey3</disabledcolor>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="textbox">
+		<left>220</left>
+		<top>222</top>
+		<width>410</width>
+		<height>213</height>
+		<align>left</align>
+		<textcolor>white</textcolor>
+		<font>card28</font>
+	</default>
+	<default type="progress">
+		<left>100</left>
+		<top>325</top>
+		<texturebg colordiffuse="Material_Teal_2">white.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture colordiffuse="selectedfocus">white.png</midtexture>
+		<righttexture>-</righttexture>
+		<overlaytexture>-</overlaytexture>
+	</default>
+	<default type="spincontrol">
+		<left>330</left>
+		<top>126</top>
+		<texturefocus border="10">common/button.png</texturefocus>
+		<textureup flipy="true">buttons/spin-down.png</textureup>
+		<texturedown>buttons/spin-down.png</texturedown>
+		<textureupfocus flipy="true" colordiffuse="selectedfocus">buttons/spin-down.png</textureupfocus>
+		<texturedownfocus colordiffuse="selectedfocus">buttons/spin-down.png</texturedownfocus>
+		<align>right</align>
+		<width>25</width>
+		<height>25</height>
+		<font>card28</font>
+		<reverse>yes</reverse>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<subtype>text</subtype>
+		<textoffsetx>-5</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<left>530</left>
+		<top>160</top>
+		<width>300</width>
+		<height>42</height>
+		<spinwidth>25</spinwidth>
+		<spinheight>25</spinheight>
+		<texturefocus border="10">common/button.png</texturefocus>
+					
+		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>		
+		<texturenofocus>-</texturenofocus>
+		<textureup flipy="true">buttons/spin-down.png</textureup>
+		<texturedown>buttons/spin-down.png</texturedown>
+		<textureupfocus flipy="true" colordiffuse="selectedfocus">buttons/spin-down.png</textureupfocus>
+		<texturedownfocus colordiffuse="selectedfocus">buttons/spin-down.png</texturedownfocus>
+		<font>card28</font>
+
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	
+	<default type="selectbutton">
+		<left>490</left>
+		<top>335</top>
+		<width>300</width>
+		<height>50</height>
+		<label>-</label>
+		<font>card28</font>
+		<texturefocus border="10">common/button.png</texturefocus>
+					
+		<textcolor>white</textcolor>
+		<focusedcolor>tiles</focusedcolor>		
+		<texturebg>button-focus.png</texturebg>
+		<textureleft>dialogs/scroll-left.png</textureleft>
+		<textureleftfocus>dialogs/scroll-left-focus.png</textureleftfocus>
+		<textureright>dialogs/scroll-right.png</textureright>
+		<texturerightfocus>dialogs/scroll-right-focus.png</texturerightfocus>
+		
+		<disabledcolor>grey3</disabledcolor>
+		<aligny>center</aligny>
+	</default>
+	<default type="slider">
+		<texturesliderbar border="10">osd_transparent.png</texturesliderbar>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibfocus colordiffuse="button_focus">-</textureslidernibfocus>
+		<orientation>horizontal</orientation>
+	</default>
+	
+	<default type="sliderex">
+		<height>50</height>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus border="10">common/button.png</texturefocus>
+					
+		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>		
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd_slider_nib.png</textureslidernib>
+		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+		<font>card28</font>
+
+		<disabledcolor>grey3</disabledcolor>
+	</default>
+	<default type="mover">
+		<left>60</left>
+		<top>192</top>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+	</default>
+	<default type="resize">
+		<left>60</left>
+		<top>192</top>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+	</default>
+	<default type="edit">
+		<left>300</left>
+		<top>200</top>
+		<width>300</width>
+		<height>42</height>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturefocus colordiffuse="buttons">white.png</texturefocus>
+					
+		<textcolor>white</textcolor>
+		<focusedcolor>selectedfocus</focusedcolor>		
+		<font>card28</font>
+		
+		<disabledcolor>grey3</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+</includes>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">51</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<views>51,57,58,,59,50,52,501,600,552</views>
+	<!-- <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload> -->
+	<controls>
+		<control type="group">
+			<!-- view id = 50 -->
+			<include>PosterView</include>
+			<include>FullWidthList</include>
+			<include>FanartView</include>
+			<include>DoubleView</include>
+			<include>TriPanel</include>	
+			<include>PosterWall</include>	
+			<include>Card_View</include>
+			<include>Netflix_View</include>
+			<include>Google-play</include>
+			
+		</control>
+
+		<control type="group">
+			<control type="group">
+				<posx>0</posx>
+				<posy>2</posy>
+				<animation effect="slide" start="0,0" end="-550,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+				<control type="image">
+					<posx>1980</posx>
+					<posy>199</posy>
+					<width>480</width>
+					<height>680</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+				</control>
+
+
+				<control type="label">
+					<description>Options</description>
+					<width>440</width>
+					<height>30</height>
+					<posx>2000</posx>
+					<posy>230</posy>
+					<label>Options</label>
+					<align>center</align>
+					<font>card30</font>
+					<textcolor>white</textcolor>
+				</control>
+
+
+				<control type="grouplist" id="9001">
+					<posx>1990</posx>
+					<posy>330</posy>
+					<width>455</width>
+					<height>600</height>
+					<onleft>50</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onback>50</onback>
+					<itemgap>15</itemgap>
+					<orientation>vertical</orientation>
+
+					<control type="button" id="2">
+						<description>View</description>
+						<include>ListButtons</include>
+						<label>Views:</label>
+					</control>
+
+
+
+					<control type="button" id="20">
+						<description>Update library</description>
+						<include>ListButtons</include>
+						<label>Update Library</label>
+						<altlabel>13353</altlabel>
+					</control>
+
+					<control type="radiobutton" id="14">
+						<description>Watched Toggle</description>
+						<include>ListRadioButtons</include>
+						<label>20367</label>
+					</control>
+
+					<control type="radiobutton" id="19">
+						<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+						<description>Filter</description>
+						<include>ListRadioButtons</include>
+						<label>587</label>
+					</control>
+
+					<control type="radiobutton" id="99">
+						<description>ClearLogos</description>
+						<include>ListRadioButtons</include>
+						<label>Clear Logos</label>
+						<visible>Control.IsVisible(50) | Control.IsVisible(600) | Control.IsVisible(51) | Control.IsVisible(58) | Control.IsVisible(57) |  Control.IsVisible(59)</visible>
+						<onclick>Skin.ToggleSetting(show_views_clearlogos)</onclick>
+						<selected>Skin.HasSetting(show_views_clearlogos)</selected>
+						
+					</control>
+					<control type="radiobutton" id="100">
+						<description>Plot</description>
+						<include>ListRadioButtons</include>
+						<label>Show Plot</label>
+						<visible>Control.IsVisible(51) | Control.IsVisible(57) |  Control.IsVisible(59)</visible>
+						<onclick>Skin.ToggleSetting(show_plot)</onclick>
+						<selected>Skin.HasSetting(show_plot)</selected>
+						
+					</control>					
+					<control type="radiobutton" id="16">
+						<description>PartyMode</description>
+						<include>ListRadioButtons</include>
+						<label>589</label>
+						<visible>Container.Content(MusicVideos)</visible>
+					</control>
+
+					<control type="radiobutton" id="11">
+						<description>Unlock Shares</description>
+						<include>ListRadioButtons</include>
+						<label>20336</label>
+						<onclick>xbmc.mastermode</onclick>
+						<selected>system.ismaster</selected>
+						<visible>system.haslocks</visible>
+					</control>
+				
+					
+					
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

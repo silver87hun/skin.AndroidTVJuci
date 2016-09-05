@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">505</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<views>505,50</views>
+					<!-- <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload> -->
+					<controls>
+					
+					<!-- <control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control> -->
+					
+				
+
+					<control type="group">
+						<!-- view id = 50 -->
+						<include>FullWidthList</include>
+						<include>AddonsList</include>
+			
+					
+
+					</control>
+					
+					<control type="group">
+					<animation effect="slide" start="0,0" end="-580,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+
+						<control type="image">
+							<description>background image</description>
+							<posx>1990</posx>
+							<posy>199</posy>
+							<width>500</width>
+							<height>680</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>white.png</texture>
+							<colordiffuse>tiles</colordiffuse>
+						</control>
+
+
+
+						<control type="label">
+							<description>OPTIONS</description>
+							<width>440</width>
+							<height>30</height>
+							<posx>2000</posx>
+							<posy>230</posy>
+							<label>Options</label>
+							<align>center</align>
+							<font>card30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>		
+					
+
+
+
+					<control type="group">
+					
+
+					
+
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>2</posy>
+					<animation effect="slide" start="0,0" end="-550,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+
+
+
+					<control type="grouplist" id="9001">
+					<posx>1990</posx>
+					<posy>330</posy>
+					<width>440</width>
+					<height>600</height>
+					<onleft>505</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onback>505</onback>
+					<itemgap>15</itemgap>
+					<orientation>vertical</orientation>
+					
+					<control type="button" id="2">
+					<description>View</description>
+					<include>ListButtons</include>
+					<label>-</label>
+					</control>
+
+					<control type="button" id="5">
+					<description>Enable auto-updates</description>
+					<include>ListRadioButtons</include>
+					<label>Settings</label>
+					</control>
+
+					<control type="radiobutton" id="7">
+						<description>Hide foreign</description>
+						<include>ListRadioButtons</include>
+						<label>Hide Foreing</label>
+						<visible>Control.IsEnabled(7)</visible>
+					</control>
+					<control type="radiobutton" id="8">
+						<description>Hide incompatible</description>
+						<include>ListRadioButtons</include>
+						<label>Hide Incompatibles</label>
+						
+					</control>
+					<control type="button" id="9">
+						<description>Check for repository updates</description>
+						<include>ListRadioButtons</include>
+						<label>Check for Updates</label>
+					</control>
+
+
+					
+					</control>
+					</control>
+					</control>
+					</controls>
+					</window>

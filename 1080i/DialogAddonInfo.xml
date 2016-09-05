@@ -1,0 +1,290 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">9000</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<zorder>0</zorder>
+					<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="125" end="100" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					<controls>
+
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1920</width>
+						<height>1080</height>
+						<texture>settingsbackground_black.png</texture>
+						
+					</control>
+
+		<control type="group">
+			<left>170</left>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
+			</animation>
+			<control type="image">
+				<left>1000</left>
+				<top>0</top>
+				<width>850</width>
+				<height>1080</height>
+				<texture>settingsbackground_right.png</texture>
+				
+			</control>
+		</control>
+
+					<control type="group">
+					<posx>0</posx>
+					<posy>-60</posy>
+					
+					<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="125" end="100" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					
+
+
+					<!-- ICON -->
+
+					<control type="image">
+					<posx>775</posx>
+					<posy>400</posy>
+					<width>375</width>
+					<height>375</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+
+					<control type="label">
+					<description>Title Label</description>
+					<posx>750</posx>
+					<posy>500</posy>
+					<width>700</width>
+
+					<height>100</height>
+					<font>label50_condensed</font>
+					<textcolor>white</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Property(Addon.Name)]</label>
+					</control>
+					
+					<control type="label">
+					<description>Title Label</description>
+					<posx>750</posx>
+					<posy>565</posy>
+					<width>300</width>
+
+					<height>100</height>
+					
+					
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>card25</font>
+					<textcolor>grey</textcolor>
+					
+					<label>$INFO[ListItem.AddonVersion]</label>
+					</control>
+					
+					<control type="label">
+					<description>Title Label</description>
+					<posx>750</posx>
+					<posy>450</posy>
+					<width>300</width>
+
+					<height>100</height>
+					
+					
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>card25</font>
+					<textcolor>grey</textcolor>
+					
+					<label>$INFO[ListItem.AddonCreator]</label>
+					</control>
+					<control type="group">
+					
+					<control type="textbox" id="400">
+					<description>Description</description>
+					<posx>50</posx>
+					<posy>925</posy>
+					<width>1100</width>
+					<height>150</height>
+					<font>card28</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					<label>$INFO[ListItem.AddonDescription]</label>
+					</control>
+					
+					<control type="textbox">
+					<description>Disclaimer</description>
+					<posx>50</posx>
+					<posy>850</posy>
+					<width>1100</width>
+					<height>38</height>
+					<font>card28</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					<label>$INFO[ListItem.AddonDisclaimer]</label>
+					</control>
+					
+					<control type="textbox">
+					<description>Disclaimer</description>
+					<posx>50</posx>
+					<posy>800</posy>
+					<width>1100</width>
+					<height>38</height>
+					<font>card25</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					<label>$INFO[ListItem.AddonSummary]</label>
+					</control>
+					</control>
+
+				
+					<control type="grouplist" id="9000">
+					<posx>1200</posx>
+					<posy>250</posy>
+					<width>850</width>
+					<height>750</height>
+					<itemgap>10</itemgap>
+					<orientation>vertical</orientation>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>49</ondown>
+					
+					<control type="button" id="6">
+					<description>Install/UnInstall Addon button</description>
+					
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>24022</label>
+					</control>
+
+					<control type="button" id="9">
+					<description>Configure Addon</description>
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>24020</label>
+
+					</control>
+					<control type="button" id="8">
+					<description>Update Addon button</description>
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>24069</label>
+					</control>
+					
+					<control type="radiobutton" id="13">
+					<description>Auto-update button</description>
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>21340</label>
+					</control>
+					
+					<control type="button" id="12">
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>518</label>
+					</control>
+					
+					
+					
+					<control type="button" id="7">
+					<description>Enable/Disable Addon button</description>
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>24021</label>
+					</control>
+					
+					<control type="button" id="10">
+					<description>Changelog button</description>
+					<height>100</height>
+					<width>700</width>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>card30</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>settingsitem_focused.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label>24036</label>
+					</control>
+					</control>
+					</control>
+
+					</controls>
+					</window>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>5</defaultcontrol>
+	<controls>
+
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<posx>175</posx>
+			<posy>-300</posy>
+
+			<control type="image">
+				<posx>90</posx>
+				<posy>300</posy>
+				<width>1320</width>
+				<height>1080</height>
+				<texture colordiffuse="tiles" background="true">white.png</texture>
+			</control>
+
+
+
+			<control type="label" id="2">
+				<description>Header</description>
+				<posx>148</posx>
+				<posy>300</posy>
+				<width>1000</width>
+				<height>100</height>
+				<font>card30</font>
+				<textcolor>white</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>118</posx>
+				<posy>420</posy>
+				<width>1268</width>
+				<height>1000</height>
+				<itemgap>7</itemgap>
+				<orientation>vertical</orientation>
+				<onup>5</onup>
+				<ondown>9000</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			</control>
+		</control>
+
+
+
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<include>ListButtons</include>
+		</control>
+
+		<control type="radiobutton" id="8">
+			<include>ListRadioButtons2</include>
+		</control>
+
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<include>spincontrolex</include>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="edit" id="12">
+			<description>Default Edit</description>
+			<include>ButtonCommonValuesWide</include>
+			<disabledcolor>grey3</disabledcolor>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default Slider</description>
+			<include>sliderex</include>
+		</control>
+
+		<control type="grouplist" id="9000">
+			<posx>275</posx>
+			<top>1020</top>
+			<orientation>horizontal</orientation>
+			<width>700</width>
+
+			<onup>5</onup>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+
+			<control type="button" id="28">
+				<description>Yes button</description>
+				<include>ButtonValuesInfoLarge</include>
+				<width>150</width>
+			</control>
+			<control type="button" id="29">
+				<description>Yes button</description>
+				<include>ButtonValuesInfoLarge</include>
+				<width>150</width>
+			</control>
+			<control type="button" id="30">
+				<description>Yes button</description>
+				<include>ButtonValuesInfoLarge</include>
+				<width>150</width>
+			</control>
+
+		</control>
+
+	</controls>
+</window>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+<include name="MediaControls">
+			<control type="group" description="Player Info">
+            <visible>Player.HasVideo</visible>
+			<left>1500</left>
+            <top>50</top>
+			<control type="image" description="Playing BG">
+                <width>430</width>
+                <height>105</height>
+                <texture colordiffuse="tiles" background="true">white.png</texture>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>10</left>
+                    <top>10</top>
+                    <width>85</width>
+                    <height>85</height>
+                    <texture>$INFO[VideoPlayer.Cover]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>15</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    
+                    <label>Now Playing:</label>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>50</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+            </control>
+        </control>
+        <control type="group" description="Music Info">
+            <visible>Player.HasAudio</visible>
+			<left>1500</left>
+            <top>50</top>
+			<control type="image" description="Playing BG">
+                <width>430</width>
+                <height>105</height>
+                <texture colordiffuse="tiles" background="true">white.png</texture>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>10</left>
+                    <top>10</top>
+                    <width>85</width>
+                    <height>85</height>
+                    <texture>$INFO[MusicPlayer.Cover]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>15</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    
+                    <label>$INFO[MusicPlayer.Title]</label>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>50</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    <label>$INFO[MusicPlayer.Artist]</label>
+                </control>
+            </control>
+        </control>
+
+		
+			
+		
+		
+</include>
+
+<include name="MediaControls_home">
+		<control type="group" description="Player Info">
+            <visible>Player.HasVideo + !Skin.HasSetting(hideVideoinfo)</visible>
+			<left>1500</left>
+            <top>50</top>
+			<control type="image" description="Playing BG">
+                <width>430</width>
+                <height>105</height>
+                <texture colordiffuse="tiles" background="true">white.png</texture>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>10</left>
+                    <top>10</top>
+                    <width>85</width>
+                    <height>85</height>
+                    <texture>$INFO[VideoPlayer.Cover]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>15</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    
+                    <label>Now Playing:</label>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>50</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+            </control>
+        </control>
+        <control type="group" description="Music Info">
+            <visible>Player.HasAudio + !Skin.HasSetting(hideMusicinfo)</visible>
+			<left>1500</left>
+            <top>50</top>
+			<control type="image" description="Playing BG">
+                <width>430</width>
+                <height>105</height>
+                <texture colordiffuse="tiles" background="true">white.png</texture>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>10</left>
+                    <top>10</top>
+                    <width>85</width>
+                    <height>85</height>
+                    <texture>$INFO[MusicPlayer.Cover]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>15</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    
+                    <label>$INFO[MusicPlayer.Title]</label>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>50</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>card25</font>
+                    <label>$INFO[MusicPlayer.Artist]</label>
+                </control>
+            </control>
+        </control>
+
+		
+					
+		<control type="group">
+					
+					<visible>Player.HasVideo + !Skin.HasSetting(hideVideoinfo)</visible>
+					
+					<posx>1500</posx>
+					<posy>150</posy>
+					
+					<control type="image" description="Playing BG">
+						<width>420</width>
+						<height>300</height>
+						<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>				
+					<control type="videowindow">
+					<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="0" end="100" time="400" center="auto" tween="sine" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="0" time="300" center="auto" tween="sine" easing="out" />
+					</animation>
+					<posx>25</posx>
+					<width>400</width>
+					<height>280</height>
+					</control>
+					
+	</control>
+					
+				
+		<control type="group">
+					
+					<visible>Player.HasAudio + !Skin.HasSetting(hideMusicinfo)</visible>
+					
+					<posx>1500</posx>
+					<posy>150</posy>
+					
+					<control type="image" description="Playing BG">
+						<width>420</width>
+						<height>300</height>
+						<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>				
+					<control type="videowindow">
+					<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="0" end="100" time="400" center="auto" tween="sine" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="0" time="300" center="auto" tween="sine" easing="out" />
+					</animation>
+					<posx>25</posx>
+					<width>400</width>
+					<height>280</height>
+					</control>
+					
+	</control>
+		
+		
+</include>
+
+</includes>

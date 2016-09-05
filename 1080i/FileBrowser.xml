@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+
+
+
+		<control type="group">
+			<posx>480</posx>
+			<posy>215</posy>
+
+
+			<control type="group">
+
+
+				<control type="image">
+
+					<posy>0</posy>
+					<width>1000</width>
+					<height>650</height>
+					<texture colordiffuse="dialogwhite">white.png</texture>
+				</control>
+
+
+
+			</control>
+
+			<control type="label" id="411">
+				<description>header label</description>
+				<posx>25</posx>
+				<posy>15</posy>
+				<width>980</width>
+				<height>25</height>
+				<font>card30button</font>
+				<label>Android TV</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>25</posx>
+				<posy>580</posy>
+				<width>950</width>
+				<height>350</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>450</onup>
+				<onleft>450</onleft>
+				<ondown>noop</ondown>
+				<itemgap>10</itemgap>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+
+				<control type="button" id="413">
+					<description>OK button</description>
+					<include>ButtonValuesInfoLargeDialog</include>
+					<width>150</width>
+					<label>186</label>
+					<textwidth>140</textwidth>
+				</control>
+
+				<control type="button" id="414">
+					<description>Cancel button</description>
+					<include>ButtonValuesInfoLargeDialog</include>
+					<width>150</width>
+					<label>222</label>
+					<textwidth>140</textwidth>
+				</control>
+
+				<control type="button" id="415">
+					
+					<description>Create folder button</description>
+					<include>ButtonValuesInfoLargeDialog</include>
+					<width>150</width>
+					<label>119</label>
+					<textwidth>140</textwidth>
+				</control>
+			</control>
+			<control type="image">
+				<posx>625</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>keep</aspectratio>
+				<texture colordiffuse="grey3">white.png</texture>
+			</control>
+			<control type="image">
+				<posx>625</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+			</control>
+
+			<control type="list" id="450">
+				<posx>25</posx>
+				<posy>70</posy>
+				<width>960</width>
+				<height>500</height>
+				<onright>9000</onright>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
+				<itemlayout height="60" width="960">
+
+					<control type="label">
+
+
+						<width>960</width>
+						<height>60</height>
+						<font>card25dialog</font>
+						<textcolor>black</textcolor>
+						<pulseonselect>false</pulseonselect>
+						<disabledcolor>buttons3</disabledcolor>
+						<selectedcolor>selectednofocus</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="60" width="960">
+					<control type="image">
+						<posx>0</posx>
+						<width>500</width>
+						<height>60</height>
+						<texture colordiffuse="black" border="10">common/button.png</texture>				
+						<align>left</align>
+						<aligny>center</aligny>
+
+					</control>
+
+
+					<control type="label">
+						<width>500</width>
+						<height>60</height>
+						<font>card25dialog</font>
+						<textcolor>selectedfocusdialog</textcolor>
+						<selectedcolor>selectedfocusdialog</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="list" id="451">
+				<posx>25</posx>
+				<posy>70</posy>
+				<width>960</width>
+				<height>500</height>
+				<onright>9000</onright>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>451</onup>
+				<ondown>9000</ondown>
+				<scrolltime tween="sine" easing="inout">300</scrolltime>
+				<itemlayout height="60" width="960">
+
+					<control type="label">
+
+
+						<width>960</width>
+						<height>60</height>
+						<font>card25dialog</font>
+						<textcolor>black</textcolor>
+						<pulseonselect>false</pulseonselect>
+						<disabledcolor>buttons3</disabledcolor>
+						<selectedcolor>selectednofocus</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+
+				<focusedlayout height="60" width="960">
+					<control type="image">
+						<posx>0</posx>
+						<width>500</width>
+						<height>60</height>
+						<texture colordiffuse="black" border="10">common/button.png</texture>				
+						<align>left</align>
+						<aligny>center</aligny>
+
+					</control>
+
+
+					<control type="label">
+						<width>500</width>
+						<height>60</height>
+						<font>card25dialog</font>
+						<textcolor>selectedfocusdialog</textcolor>
+						<selectedcolor>selectedfocusdialog</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+
+	</controls>
+</window>

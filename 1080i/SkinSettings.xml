@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onunload>
+	<controls>
+		<left>250</left>
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>settingsbackground_black.png</texture>
+			
+		</control>
+		<control type="textbox">
+			<description>header label</description>
+			<left>100</left>
+			<top>500</top>
+			<width>300</width>
+			<height>100</height>
+			<font>card30</font>
+			<wrapmultiline>true</wrapmultiline>
+			<label>$INFO[Control.GetLabel(2)]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="image">
+			<left>1000</left>
+			<top>0</top>
+			<width>1900</width>
+			<height>1080</height>
+			<texture>settingsbackground_right.png</texture>
+			
+		</control>
+		<control type="group">
+			<left>250</left>
+			<top>100</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
+			</animation>
+
+			<control type="list" id="9000">
+				<left>0</left>
+				<top>90</top>
+				<width>750</width>
+				<height>800</height>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="100" width="700">
+
+					<control type="label">
+						<left>80</left>
+						<top>75</top>
+						<width>650</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey3</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>80</left>
+						<top>105</top>
+						<width>650</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="100" width="700">
+					<control type="button" id="20">
+						<description>Setting level button</description>
+						<left>500</left>
+						<top>100</top>
+						<width>250</width>
+						<height>100</height>
+
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>card30</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texture>-</texture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+
+						<onclick>-</onclick>
+					</control>
+					<control type="label">
+						<left>80</left>
+						<top>75</top>
+						<width>650</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>white</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>80</left>
+						<top>105</top>
+						<width>650</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+				<content>
+
+					<item id="1">
+						<label>128</label>
+						<label2>5</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="2">
+						<label>513</label>
+						<label2>31112</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>31102</label>
+						<label2>31112</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>Menu</label>
+						<label2>31200</label2>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+
+
+
+			<control type="label">
+				<description>header label</description>
+				<left>775</left>
+				<top>20</top>
+				<width>726</width>
+				<height>30</height>
+				<font>card30</font>
+				<label>$LOCALIZE[20077] - $INFO[Container(9000).ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+
+			<control type="group" id="9010">
+				<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<left>775</left>
+					<top>75</top>
+					<width>885</width>
+					<height>850</height>
+					<itemgap>5</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="label" id="100">
+						<width>850</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>31106</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="201">
+						<description>enable video info</description>
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Disable Auto Scroll for Plot</label>
+						<onclick>Skin.ToggleSetting(noautoscroll)</onclick>
+						<selected>Skin.HasSetting(noautoscroll)</selected>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+					</control>
+					<control type="label" id="106">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>512</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="3110">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>Use Startup Playlist</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+						<align>left</align>
+						<aligny>center</aligny>	
+					</control>
+					<control type="button" id="3120">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<label>Playlist Path</label>
+						<label2>[COLOR=selectedfocus]$INFO[Skin.String(Startup_Playlist_Path)][/COLOR]</label2>
+						<onclick>Skin.SetFile(Startup_Playlist_Path)</onclick>
+						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+					</control>
+				</control>
+
+				<control type="grouplist" id="9002">
+					<visible>Container(9000).Hasfocus(2)</visible>
+					<left>775</left>
+					<top>75</top>
+					<width>885</width>
+					<height>800</height>
+					<itemgap>5</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<control type="label" id="200">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>31101</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+
+					<control type="radiobutton" id="1011">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>Show Clear Logos on Top Widget</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<onclick>Skin.ToggleSetting(show_widgetclearlogos)</onclick>
+						<selected>Skin.HasSetting(show_widgetclearlogos)</selected>
+					</control>
+					<control type="radiobutton" id="1009">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>Show Coloured Transitions</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<onclick>Skin.ToggleSetting(show_transitions)</onclick>
+						<selected>Skin.HasSetting(show_transitions)</selected>
+					</control>
+					<control type="radiobutton" id="202">
+						<description>enable video info</description>
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Show Video Now Playing</label>
+						<onclick>Skin.ToggleSetting(hideVideoinfo)</onclick>
+						<selected>!Skin.HasSetting(hideVideoinfo)</selected>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+					</control>
+					<control type="radiobutton" id="203">
+						<description>enable music info</description>
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>Show Music Now Playing</label>
+						<onclick>Skin.ToggleSetting(hideMusicinfo)</onclick>
+						<selected>!Skin.HasSetting(hideMusicinfo)</selected>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+					</control>
+					<control type="radiobutton" id="204">
+						<description>enable weather info</description>
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>20084</label>
+						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+						<selected>Skin.HasSetting(homepageWeatherinfo)</selected>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<visible>!IsEmpty(Weather.Plugin)</visible>
+					</control>
+					<control type="radiobutton" id="1010">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>Debug Grid</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+						<selected>Skin.HasSetting(DebugGrid)</selected>
+					</control>
+
+
+
+
+
+
+				</control>
+
+				<control type="grouplist" id="9003">
+					<visible>Container(9000).Hasfocus(3)</visible>
+					<left>775</left>
+					<top>75</top>
+					<width>885</width>
+					<height>800</height>
+					<itemgap>5</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
+					<control type="label" id="300">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>31106</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="303">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>Home Background Videos and Visualizations</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
+						<selected>Skin.HasSetting(ShowBackgroundVideo)</selected>
+					</control>
+	
+					<control type="label" id="310">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>31102</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="311">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>31109</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
+						<selected>Skin.HasSetting(UseCustomBackground)</selected>
+					</control>
+					<control type="button" id="312">
+						<width>884</width>
+						<height>100</height>
+						<font>card30</font>
+						<label>- $LOCALIZE[31110]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+						<enable>Skin.HasSetting(UseCustomBackground)</enable>
+					</control>
+				</control>
+				<control type="group">
+					<control type="grouplist" id="9004">
+						<visible>Container(9000).Hasfocus(4)</visible>
+						<left>775</left>
+						<top>75</top>
+						<width>885</width>
+						<height>800</height>
+						<itemgap>5</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9004</onup>
+						<ondown>9004</ondown>
+						<!-- 						<control id="55" type="button">
+						<width>850</width>
+						<height>100</height>
+						<font>card30</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>settingsitem_focused.png</texturefocus>
+						<align>left</align>
+						<aligny>center</aligny>						
+						<label>HOME PANELS</label>
+						<label2>Setup</label2>
+						<onclick>SetProperty(SubMenu,1,home)</onclick>
+						<onclick>ActivateWindow(1105)</onclick>
+						</control> -->
+						<control type="button" id="9211" description="Customise Home">
+							<description>Skin Shortcuts</description>
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<textcolor>white</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>Customize Home</label>
+							<label2>Skin Shortcuts</label2>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+							<align>left</align>
+							<aligny>center</aligny>						
+							<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+						</control>
+						<control type="button" id="5001" description="FAVOURITES">
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<visible>true</visible>
+							<label>Top Widget Row</label>
+							<label2>$INFO[Skin.String(CustomMyTvWidgetName)]</label2>
+							<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=CustomMyTvWidgetName&amp;skinWidgetTarget=CustomMyTvWidgetTarget&amp;skinWidgetPath=CustomMyTvWidgetPath)</onclick>
+							<onclick>Skin.SetString(CustomMyTvWidgetShape,thumb)</onclick>
+							<onclick>SetProperty(ReloadTriggered,1,home)</onclick>
+							<textcolor>white</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+						</control>	
+						<control type="button" id="5500">
+							<description>MY TV STRING</description>
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<visible>true</visible>
+							<label>Name</label>							
+							<label2>$INFO[Skin.String(CustomMyTvWidgetName)]</label2>
+
+							<textcolor>grey3</textcolor>
+							<disabledcolor>FF000000</disabledcolor>
+							<invalidcolor>FFFFFFFF</invalidcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+							<onclick>Skin.SetString(CustomMyTvWidgetName)</onclick>
+							<pulseonselect>no</pulseonselect>
+						</control>
+						<control type="button" id="5003" description="Custom Type">
+							<label>Shape Type</label>
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<visible>true</visible>
+							<label2>$INFO[Skin.String(CustomMyTvWidgetShape)]</label2>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(CustomMyTvWidgetShape,thumb))</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomMyTvWidgetShape,poster))</onclick>
+
+							<include>ClickActions_CustomWidgetShape</include>
+							<textcolor>grey3</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>							
+						</control>
+						<control type="button" id="5002" description="Custom Type">
+							<label>Addon Type</label>
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<visible>true</visible>
+							<label2>$INFO[Skin.String(CustomMyTvWidgetTarget)]</label2>
+							<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(CustomMyTvWidgetTarget,programs))</onclick>
+							<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomMyTvWidgetTarget,videos))</onclick>
+							<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(CustomMyTvWidgetTarget,music))</onclick>
+							<include>ClickActions_CustomWidgetType</include>
+							<textcolor>grey3</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>							
+						</control>
+						<control type="radiobutton" id="3114">
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<label>Customize Search Button</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+							<onclick>Skin.ToggleSetting(Custom_Search_Button)</onclick>
+							<selected>Skin.HasSetting(Custom_Search_Button)</selected>
+							<align>left</align>
+							<aligny>center</aligny>	
+						</control>	
+						<control type="button" id="600" description="FAVOURITES">
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<visible>true</visible>
+							<label>Search Button</label>
+							<label2>$INFO[Skin.String(Custom_SearchLabel)]</label2>
+							<!-- <onclick>RunScript(script.favourites,property=ShelfSearch.1)</onclick> -->
+							<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=Custom_SearchLabel&amp;skinAction=Custom_SearchAction)</onclick>
+
+							<textcolor>white</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+							<visible>Skin.HasSetting(Custom_Search_Button)</visible>
+						</control>		
+								
+
+
+						<control type="radiobutton" id="3113">
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<label>Hide Home Apps Tiles</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+							<onclick>SetProperty(ReloadTriggered,1,home)</onclick>
+							<onclick>Skin.ToggleSetting(Hide_Home_Tiles)</onclick>
+							<selected>Skin.HasSetting(Hide_Home_Tiles)</selected>
+							<align>left</align>
+							<aligny>center</aligny>	
+						</control>						
+						<control type="button" id="11000" description="CUSTOMIZE APPS">
+							<width>884</width>
+							<height>100</height>
+							<font>card30</font>
+							<visible>true</visible>
+							<label>Customize Home Apps</label>
+							
+							<!-- <onclick>RunScript(script.favourites,property=ShelfSearch.1)</onclick> -->
+							<onclick>ActivateWindow(1080)</onclick>
+
+							<textcolor>white</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>settingsitem_focused.png</texturefocus>
+							<visible>!Skin.HasSetting(Hide_Home_Tiles)</visible>
+						</control>
+					</control>
+				</control>
+
+			</control>
+		</control>
+
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+
+	</controls>
+</window>

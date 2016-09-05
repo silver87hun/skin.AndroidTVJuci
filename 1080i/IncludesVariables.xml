@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<includes>
+
+	<variable name="ScrollLabel">
+		<value condition="Control(50).OnNext">Next</value>
+		<value condition="Control(50).OnPrevious">Previous</value>
+	</variable>
+
+	<variable name="LayoutWidth">
+		<value condition="Container(9001).Listitem.Season">416</value>
+		<value condition="!Container(9001).Listitem.Season">260</value>
+
+	</variable>
+    <variable name="VideoDescription" type="text">
+        <value condition="Container.Content(Seasons) + !IsEmpty(Container.ShowPlot)">[COLOR=lightgrey]$INFO[Container.ShowPlot][/COLOR]</value>
+        <value condition="Container.Content(Episodes) + StringCompare(ListItem.label,..)">[COLOR=lightgrey]$INFO[Container.ShowPlot][/COLOR]</value>
+        <value condition="Container.Content(Episodes) + !IsEmpty(ListItem.PlotOutline)">[COLOR=lightgrey]$INFO[ListItem.PlotOutline][/COLOR]</value>
+        <value condition="Container.Content(Episodes) + !IsEmpty(ListItem.Plot)">[COLOR=lightgrey]$INFO[ListItem.Plot][/COLOR]</value>
+        <value condition="!IsEmpty(ListItem.PlotOutline)">[COLOR=lightgrey]$INFO[ListItem.PlotOutline][/COLOR]</value>
+        <value condition="!IsEmpty(ListItem.Plot)">[COLOR=lightgrey]$INFO[ListItem.Plot][/COLOR]</value>
+        <value>$INFO[ListItem.Property(Addon.Description)]</value>
+    </variable>
+
+	<variable name="WindowTransitionColor">
+		<value condition="Window.IsActive(10025)">moviesprimarydark</value>
+		<value condition="Window.IsActive(music)">matplayorange</value>
+		<value condition="Window.IsActive(10502)">matplayorange</value>
+		<value condition="Window.IsActive(home)">matplaygreen</value>
+	</variable>
+
+	<variable name="SeasonEpisodeLabel">
+		<value condition="!IsEmpty(ListItem.Episode) + IntegerGreaterThan(ListItem.Episode,9) + IntegerGreaterThan(ListItem.Season,9)">[UPPERCASE]S$INFO[ListItem.Season]E$INFO[ListItem.Episode][/UPPERCASE]</value>
+		<value condition="!IsEmpty(ListItem.Episode) + IntegerGreaterThan(ListItem.Episode,9)">[UPPERCASE]S0$INFO[ListItem.Season]E$INFO[ListItem.Episode][/UPPERCASE]</value>
+		<value condition="!IsEmpty(ListItem.Episode) + IntegerGreaterThan(ListItem.Season,9)">[CR][UPPERCASE]S$INFO[ListItem.Season]E0$INFO[ListItem.Episode][/UPPERCASE]</value>
+		<value condition="!IsEmpty(ListItem.Episode)">[UPPERCASE]S0$INFO[ListItem.Season]E0$INFO[ListItem.Episode][/UPPERCASE]</value>
+	</variable>
+
+</includes>
